@@ -11,7 +11,7 @@ require 'dbconnect.php';
 </head>
 <body class="bg-light">
 <header>
-<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"><h3>Task</h3></a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -28,15 +28,33 @@ require 'dbconnect.php';
       </li>
     </ul> 
 </nav>
-</header>
+
+</header> <br><br>
+
 
 <div class="card">
   <img class="card-img-top" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">About Us</h5></div>
-  <div class="card-body" id="about"></div>
-    <h4 class="text">Who We Are!</h4>
+  <div class="card-body" id="about"><h4 class="text">Who We Are!</h4></div>
+    
 </div>
     <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!</p>
+         <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!</p>
+         <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
@@ -52,6 +70,22 @@ require 'dbconnect.php';
 <img class="card-img-top" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">Services</h5></div>
   <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!</p>
+         <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
+         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!</p>
+         <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
@@ -101,20 +135,31 @@ require 'dbconnect.php';
 
       // $insert->execute();
 
-      if(isset($_POST["submit"])){
-        $insert = "INSERT INTO blog (name, title, content, date)
-        VALUES ('".$_POST["name"]."','".$_POST["title"]."','".$_POST["content"]."','".$_POST["date"]."')";
-        if ($conn->query($insert)) {
-          echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
-          }
+      // if(isset($_POST["submit"])){
+      //   $date = getdate();
+      //   $insert = "INSERT INTO blog (name, title, content, date)
+      //   VALUES ('".$_POST["name"]."','".$_POST["title"]."','".$_POST["content"]."','".$_POST['$date']."')";
+      //   if ($conn->query($insert)) {
+      //     echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+      //     }
 
-          $conn=null;
+      //     $conn=null;
+      // }
+      date_default_timezone_set('Asia/Calcutta');
+        $date = date('m/d/Y h:i:s a', time());
+      if (isset($_POST['submit'])) {
+        
+      $sql = "INSERT INTO blog (title, content, name, date) VALUES(:title, :content, :name, :date)";
+    $statement = $conn->prepare($sql);
+    $statement->bindParam(":title", $_POST['title'], PDO::PARAM_STR);
+    $statement->bindParam(":content",$_POST['content'], PDO::PARAM_STR);
+    $statement->bindParam(":name", $_POST['name'], PDO::PARAM_STR);
+    $statement->bindParam(":date", $date, PDO::PARAM_STR);
+    
+  
+    $statement->execute();
+    echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
       }
-
-
-
-      
-
       ?>
       
       <form action = "index.php" method="POST">
@@ -134,8 +179,12 @@ require 'dbconnect.php';
 
  </div>
 
+  </div>
+<div class="card" id="contact">
+<img class="card-img-top" src="imgs/hdr.jpg">
+  <div class="card-img-overlay"><h5 class="card-title text-white">Contact Us</h5></div>
   <div class="contactus" >
-    <h3 class="text-center" id="contact">Contact Us</h3>
+    <br>
 
     <div class="container">
   <div class="row">
@@ -173,9 +222,9 @@ require 'dbconnect.php';
 </div>
     
 </div>
-<div class="card">
-<img class="card-img-top" src="imgs/hdr.jpg">
-  <div class="card-img-overlay"><h5 class="card-title text-white">Contact Us</h5></div></div>
+  
+  
+  </div>
 
     
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAimSdtntTqL2lHcj7iEX5yqTZgjL2NGFA&callback=initMap"
