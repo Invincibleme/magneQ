@@ -35,17 +35,17 @@ require 'dbconnect.php';
 <div class="card">
   <img class="card-img-top" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">About Us</h5></div>
-  <div class="card-body" id="about"><h4 class="text">Who We Are!</h4></div>
+  <div class="card-body" id="about"><h4 class="text">Who We Are! The very definition of branding power</h4></div>
     
 </div>
-    <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
-         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
-         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
-         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
-         labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!</p>
+    <p class="card-text text-justify text">
+      Magneq is, on the face of it, simply a one-letter change from the word ‘magnet’.
+      But there’s a lot more to it than that. The magnet is a universal metaphor for attraction,
+      focus and even temptation (i.e. magnetic personality, animal magnetism),
+      as well as being one of nature’s most fascinating phenomena - and literally an electric force of nature. 
+      As well as containing these references to natural power, Magneq also conveys a tough, almost industrial character
+      - made all the more memorable by the distinctive use of the letter ‘Q’.
+      This is a superb, contemporary brand name with real energy.</p>
          <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
@@ -97,7 +97,7 @@ require 'dbconnect.php';
 
 <div class="card" id="blogs">
 <img class="card-img-top" src="imgs/hdr.jpg">
-  <div class="card-img-overlay"><h5 class="card-title text-white">Blog</h5></div>
+  <div class="card-img-overlay"><h5 class="card-title text-white">Blog</h5></div> <br>
   <div class="container">
   <div class="row">
     <div class="col-sm-8">
@@ -111,40 +111,16 @@ require 'dbconnect.php';
     <?php while ($r = $q->fetch()): ?>
             
                 <h2><?php echo htmlspecialchars($r['title']) ;?></h2>
-                <small><?php echo htmlspecialchars($r['name']);?><span>  </span><?php
-                echo htmlspecialchars($r['date']);?></small>
+                <small> <label>Posted by: </label> <strong><?php echo htmlspecialchars($r['name']);?></strong><span>  </span>
+               At: <strong> <?php echo htmlspecialchars($r['date']);?></strong></small>
                 
                 <p><?php echo htmlspecialchars($r['content']); ?></p>
             
         <?php endwhile; ?>
-    </div>
+    </div> <br>
     <div class="col-sm">
-      <h3>Add New Blog</h3>
+      <h3>Write A New Blog..</h3>
       <?php 
-      // $insert = $conn->prepare("INSERT INTO blog (name, title, content, date ) 
-      // VALUES (:name,:title,:content,:date)");
-      // $insert->bindParam(':name',$name);
-      // $insert->bindParam(':title',$title);
-      // $insert->bindParam(':content',$content);
-      // $insert->bindParam(':date',$date);
-
-      // $name = $_POST['name'];
-      // $title = $_POST['title'];
-      // $content = $_POST['content'];
-      // $date = getdate();
-
-      // $insert->execute();
-
-      // if(isset($_POST["submit"])){
-      //   $date = getdate();
-      //   $insert = "INSERT INTO blog (name, title, content, date)
-      //   VALUES ('".$_POST["name"]."','".$_POST["title"]."','".$_POST["content"]."','".$_POST['$date']."')";
-      //   if ($conn->query($insert)) {
-      //     echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
-      //     }
-
-      //     $conn=null;
-      // }
       date_default_timezone_set('Asia/Calcutta');
         $date = date('m/d/Y h:i:s a', time());
       if (isset($_POST['submit'])) {
@@ -158,7 +134,9 @@ require 'dbconnect.php';
     
   
     $statement->execute();
-    echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+    echo "<meta http-equiv='refresh' content='0'>";
+    echo "<script type= 'text/javascript'>alert('Your Post Is Submitted');</script>";
+    
       }
       ?>
       
@@ -173,7 +151,7 @@ require 'dbconnect.php';
     <input type="text" class="form-control" name="title" placeholder="Title" required>
   </div>
   <textarea class="form-control" name="content" cols="30" rows="10" placeholder = "Write here.." required></textarea>
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary ">Post</button>
 </form>
 </div>
 
@@ -215,19 +193,24 @@ require 'dbconnect.php';
           map: map,
         });
       }
-    </script>
+    </script> <br>
+
+    <Strong>Find Us On:</Strong>
+     <a href="https:facebook.com"> <img src="imgs/fb.png" alt="" width="42" height = "42"></a>
+     <a href="https:instagram.com"> <img src="imgs/insta.png" alt="" width="42" height = "42"></a>
+    <a href="https:twitter.com"> <img src="imgs/twitter.png" alt="" width="42" height = "42"></a>
+    <a href="https:linkedin.com"> <img src="imgs/in.png" alt="" width="42" height = "42"></a>
+    <a href="https:plus.google.com"><img src="imgs/gplus.png" alt="" width="42" height = "42"></a>
+        
     </div>
   </div>
 </div>
 </div>
-    
+</div>  
 </div>
-  
-  
-  </div>
 
     
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAimSdtntTqL2lHcj7iEX5yqTZgjL2NGFA&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNJTrtS58VWMeJKZVOksPFplLIA4hJ5lU&callback=initMap"
     async defer></script>
 </body>
 
