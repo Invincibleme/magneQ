@@ -6,16 +6,25 @@ require 'dbconnect.php';
 <head>
     <title>Task</title>
     <link rel="stylesheet" href="css.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+     crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="bg-light">
 <header>
-<nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><h3>Task</h3></a>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#about">About Us <span class="sr-only">(current)</span></a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.php">Magne Q </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+      <li >
+        <a class="nav-link" href="#about">About Us </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#services">Services</a>
@@ -27,15 +36,17 @@ require 'dbconnect.php';
         <a class="nav-link" href="#contact">Contact Us</a>
       </li>
     </ul> 
-</nav>
+         </div>
+    </nav>
+
 
 </header> <br><br>
 
 
 <div class="card">
-  <img class="card-img-top" src="imgs/hdr.jpg">
+  <img class="card-img-top" style="min-height:80px" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">About Us</h5></div>
-  <div class="card-body" id="about"><h4 class="text">Who We Are! The very definition of branding power</h4></div>
+  <div class="card-body bg-dark" id="about"><h4 class="text-light text">Who We Are! The very definition of branding power</h4></div>
     
 </div>
     <p class="card-text text-justify text">
@@ -67,7 +78,7 @@ require 'dbconnect.php';
 
 <div class="card" id="services">
 
-<img class="card-img-top" src="imgs/hdr.jpg">
+<img class="card-img-top img" style="min-height:80px" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">Services</h5></div>
   <p class="card-text text-justify text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis, quaerat eum distinctio quasi aperiam illum est ducimus
          labore doloribus exercitationem totam obcaecati, nemo saepe optio necessitatibus temporibus porro quibusdam!
@@ -96,7 +107,7 @@ require 'dbconnect.php';
   </div>
 
 <div class="card" id="blogs">
-<img class="card-img-top" src="imgs/hdr.jpg">
+<img class="card-img-top" style="min-height:80px" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">Blog</h5></div> <br>
   <div class="container">
   <div class="row">
@@ -158,8 +169,8 @@ require 'dbconnect.php';
  </div>
 
   </div>
-<div class="card" id="contact">
-<img class="card-img-top" src="imgs/hdr.jpg">
+<div class="card"  id="contact">
+<img class="card-img-top" style="min-height:80px" src="imgs/hdr.jpg">
   <div class="card-img-overlay"><h5 class="card-title text-white">Contact Us</h5></div>
   <div class="contactus" >
     <br>
@@ -177,7 +188,7 @@ require 'dbconnect.php';
     </div>
     
     <div class="col-sm">
-    <div id="map" style="width:80%;height:300px;"></div>
+    <div id="map" style="width:100%;height:300px;"></div>
     <script>
 
       function initMap() {
